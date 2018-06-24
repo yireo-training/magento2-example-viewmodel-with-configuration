@@ -1,0 +1,14 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \\Yireo\ExampleViewModelWithConfiguration\ViewModel\Product $viewModel */
+$productViewModel = $block->getProductViewModel();
+$products = $productViewModel->getProducts();
+?>
+<div class="products">
+    <h3>Yireo ExampleViewModelWithConfiguration: Products</h3>
+    <ul>
+        <?php foreach ($products as $product): ?>
+            <li><?= $product->getName() ?></li>
+        <?php endforeach; ?>
+    </ul>
+</div>
